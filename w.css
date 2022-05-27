@@ -1,0 +1,151 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+background-color: rgb(1, 5, 27);
+
+}
+*{
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+    border:1px solid tomato;
+    background-color: orangered;
+}
+.logo img{
+    height: 60px;
+    border-radius: 22px;
+}
+nav .menu{
+    display: flex;
+}
+nav .menu li a{
+    height: 20px;
+    line-height: 20px;
+    margin: 0 15px;
+    padding: 0px 22px;
+    display: flex;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: rgb(161, 142, 142);
+    letter-spacing: 1px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    height: 20px;
+}
+nav .menu li a::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: white;
+}
+.search{
+    width: 250px;
+    height: 40px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0px 20px;
+
+}
+.search input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.search i{
+    color: orangered;
+}
+nav .menu li a:hover{
+    color: #fff;
+    box-shadow: 0px 2px #fff;
+    transition: all ease 0.2s;
+}
+label #btn,
+label #cancel{
+    color: white;
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin: right 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+
+@media (max-width: 1118px) {
+    nav img{
+        left: 8%;
+    }
+}
+
+
+@media (max-width: 944px) {
+    nav img{
+        left: 6%;
+        top: 20px;
+    }
+    nav .menu li a{
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 860px) {
+    label #btn{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width: 60%;
+        height: 60vh;
+        background: orangered;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    }
+    nav .menu li a{
+        font-size: 15px;
+        margin: 40px 0;
+        line-height: 20px;
+        
+        
+    }
+    nav .menu {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+
